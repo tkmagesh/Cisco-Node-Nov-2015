@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>Scheduler</title>
     <script>
+    var publicNumber = 100;
     (function(){
+        var privateNumber = 200;
         window.addEventListener("DOMContentLoaded", init);
         var divMessages = null;
         function init(){
@@ -14,6 +16,7 @@
             divMessages = document.getElementById("divMessages");
         }
         function onBtnDoWorkClick(){
+            console.log("publicNumber = ", publicNumber, "privateNumber = ", privateNumber);
             displayMessage("Work Started!");
             setTimeout(triggerWork);
         }
