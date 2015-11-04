@@ -7,7 +7,7 @@ calculator
     * getResult()
     *
 
-usage
+usage (rollingCalculatorClient.js)
 calculator.add(100)
 calculator.subtract(50)
 calculator.multiply(4)
