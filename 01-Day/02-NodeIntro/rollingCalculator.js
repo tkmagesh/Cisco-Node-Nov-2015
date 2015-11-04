@@ -14,3 +14,25 @@ calculator.multiply(4)
 calculator.divide(2)
 calculator.getResult() //=> 100
 */
+
+console.log('calculator factory is being loaded');
+module.exports = function(){
+    var result = 0;
+    return {
+        add : function(n){
+            result += n;
+        },
+        subtract : function(n){
+            result -= n;
+        },
+        multiply : function(n){
+            result *= n;
+        },
+        divide : function(n){
+            result /= n;
+        },
+        getResult : function(){
+            return result;
+        }
+    };
+};
