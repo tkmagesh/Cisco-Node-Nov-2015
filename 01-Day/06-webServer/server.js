@@ -1,10 +1,12 @@
 var http = require('http'),
     fs = require('fs'),
+    url = require('url'),
     path = require('path');
 
 var server = http.createServer(function(req, res){
-    var resource = path.join(__dirname, req.url);
-    console.log(req.url);
+    var urlObj = url.parse(req.url, true);
+    var resource = path.join(__dirname, urlObj.pathname);
+    console.log(resource);
     if (!fs.existsSync(resource)){
         res.statusCode = 404;
         res.end();
