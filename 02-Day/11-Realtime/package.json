@@ -1,0 +1,14 @@
+{
+  "name": "11-Realtime",
+  "version": "0.1.0",
+  "description": "a sample for websocket demo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Magesh K",
+  "license": "ISC",
+  "dependencies": {
+    "nodejs-websocket": "^1.4.0"
+  }
+}
