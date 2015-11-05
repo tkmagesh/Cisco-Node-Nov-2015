@@ -3,11 +3,12 @@ var http = require('http'),
     staticServer = require('./staticServer'),
     calculatorProcessor = require('./calculatorProcessor'),
     notFoundHandler = require('./notFoundHandler'),
+    path = require('path'),
     app = require('./app');
 
 
 app.use(dataParser);
-app.use(staticServer);
+app.use(staticServer(path.join(__dirname, './public')));
 app.use(calculatorProcessor);
 app.use(notFoundHandler);
 
