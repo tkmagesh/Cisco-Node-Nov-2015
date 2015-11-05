@@ -5,6 +5,13 @@ var http = require('http'),
     qs = require('querystring'),
     calculator = require('./calculator');
 
+/*
+Refactor the below into the following components
+    dataParser
+    staticServer
+    calculatorProcessor
+    notFoundHandler
+*/
 var staticExtns = ['.html','.js','.css','.txt','.jpg','.png','.json','.xml'];
 function isStatic(resource){
     return staticExtns.indexOf(path.extname(resource)) !== -1;
